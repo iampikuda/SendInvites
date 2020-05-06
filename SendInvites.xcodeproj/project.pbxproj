@@ -10,11 +10,13 @@
 		2FFED48EFB9FA96026C03D57 /* libPods-SendInvites.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BDABDCEC206AB41A3CDC69 /* libPods-SendInvites.a */; };
 		36ECAA8B2462FE1F007B9FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */; };
 		36ECAA8D2462FE1F007B9FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */; };
-		36ECAA8F2462FE1F007B9FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */; };
-		36ECAA922462FE1F007B9FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA902462FE1F007B9FB4 /* Main.storyboard */; };
 		36ECAA942462FE20007B9FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA932462FE20007B9FB4 /* Assets.xcassets */; };
 		36ECAA972462FE20007B9FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */; };
 		36ECAAA22462FE20007B9FB4 /* SendInvitesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */; };
+		36ECAAAE2463037B007B9FB4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAAD2463037B007B9FB4 /* AppCoordinator.swift */; };
+		36ECAAB1246306B6007B9FB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAB0246306B6007B9FB4 /* HomeViewController.swift */; };
+		36ECAAB324630815007B9FB4 /* SIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAB224630815007B9FB4 /* SIViewController.swift */; };
+		36ECAAB524630883007B9FB4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAB424630883007B9FB4 /* HomeViewModel.swift */; };
 		62A226CC9E5B5A8BE9F631E4 /* libPods-SendInvitesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6BCF14C3B18BA9DF7229E7 /* libPods-SendInvitesTests.a */; };
 /* End PBXBuildFile section */
 
@@ -33,14 +35,16 @@
 		36ECAA872462FE1F007B9FB4 /* SendInvites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendInvites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		36ECAA912462FE1F007B9FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36ECAA932462FE20007B9FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36ECAA962462FE20007B9FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36ECAA982462FE20007B9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36ECAA9D2462FE20007B9FB4 /* SendInvitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendInvitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInvitesTests.swift; sourceTree = "<group>"; };
 		36ECAAA32462FE20007B9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36ECAAAD2463037B007B9FB4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		36ECAAB0246306B6007B9FB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		36ECAAB224630815007B9FB4 /* SIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIViewController.swift; sourceTree = "<group>"; };
+		36ECAAB424630883007B9FB4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		64BDABDCEC206AB41A3CDC69 /* libPods-SendInvites.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SendInvites.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73868EFB40DC1435A2990B52 /* Pods-SendInvites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvites.release.xcconfig"; path = "Target Support Files/Pods-SendInvites/Pods-SendInvites.release.xcconfig"; sourceTree = "<group>"; };
 		7885D2B82C7C9B335802FD19 /* Pods-SendInvitesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvitesTests.debug.xcconfig"; path = "Target Support Files/Pods-SendInvitesTests/Pods-SendInvitesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,13 +95,12 @@
 		36ECAA892462FE1F007B9FB4 /* SendInvites */ = {
 			isa = PBXGroup;
 			children = (
+				36ECAAAC24630352007B9FB4 /* SupportingFiles */,
+				36ECAAAF24630678007B9FB4 /* View */,
 				36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */,
+				36ECAAAD2463037B007B9FB4 /* AppCoordinator.swift */,
 				36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */,
-				36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */,
-				36ECAA902462FE1F007B9FB4 /* Main.storyboard */,
-				36ECAA932462FE20007B9FB4 /* Assets.xcassets */,
-				36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */,
-				36ECAA982462FE20007B9FB4 /* Info.plist */,
+				36ECAAB224630815007B9FB4 /* SIViewController.swift */,
 			);
 			path = SendInvites;
 			sourceTree = "<group>";
@@ -109,6 +112,25 @@
 				36ECAAA32462FE20007B9FB4 /* Info.plist */,
 			);
 			path = SendInvitesTests;
+			sourceTree = "<group>";
+		};
+		36ECAAAC24630352007B9FB4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				36ECAA932462FE20007B9FB4 /* Assets.xcassets */,
+				36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */,
+				36ECAA982462FE20007B9FB4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		36ECAAAF24630678007B9FB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36ECAAB0246306B6007B9FB4 /* HomeViewController.swift */,
+				36ECAAB424630883007B9FB4 /* HomeViewModel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		618C268AA1FC148E49635787 /* Frameworks */ = {
@@ -216,7 +238,6 @@
 			files = (
 				36ECAA972462FE20007B9FB4 /* LaunchScreen.storyboard in Resources */,
 				36ECAA942462FE20007B9FB4 /* Assets.xcassets in Resources */,
-				36ECAA922462FE1F007B9FB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36ECAA8F2462FE1F007B9FB4 /* ViewController.swift in Sources */,
+				36ECAAB324630815007B9FB4 /* SIViewController.swift in Sources */,
+				36ECAAB524630883007B9FB4 /* HomeViewModel.swift in Sources */,
+				36ECAAAE2463037B007B9FB4 /* AppCoordinator.swift in Sources */,
 				36ECAA8B2462FE1F007B9FB4 /* AppDelegate.swift in Sources */,
 				36ECAA8D2462FE1F007B9FB4 /* SceneDelegate.swift in Sources */,
+				36ECAAB1246306B6007B9FB4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,14 +330,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		36ECAA902462FE1F007B9FB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36ECAA912462FE1F007B9FB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = SendInvites/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SendInvites/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = SendInvites/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SendInvites/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
