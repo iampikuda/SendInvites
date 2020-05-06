@@ -1,0 +1,6 @@
+module Pods_SendInvitesTests {
+  umbrella header "Pods-SendInvitesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_SendInvites {
+  umbrella header "Pods-SendInvites-umbrella.h"
+
+  export *
+  module * { export * }
+}

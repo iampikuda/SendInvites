@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FFED48EFB9FA96026C03D57 /* libPods-SendInvites.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BDABDCEC206AB41A3CDC69 /* libPods-SendInvites.a */; };
+		36ECAA8B2462FE1F007B9FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */; };
+		36ECAA8D2462FE1F007B9FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */; };
+		36ECAA8F2462FE1F007B9FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */; };
+		36ECAA922462FE1F007B9FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA902462FE1F007B9FB4 /* Main.storyboard */; };
+		36ECAA942462FE20007B9FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA932462FE20007B9FB4 /* Assets.xcassets */; };
+		36ECAA972462FE20007B9FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */; };
+		36ECAAA22462FE20007B9FB4 /* SendInvitesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */; };
+		62A226CC9E5B5A8BE9F631E4 /* libPods-SendInvitesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6BCF14C3B18BA9DF7229E7 /* libPods-SendInvitesTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36ECAA9E2462FE20007B9FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36ECAA7F2462FE1F007B9FB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36ECAA862462FE1F007B9FB4;
+			remoteInfo = SendInvites;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		067E341F79C2194293E5DBCF /* Pods-SendInvites.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvites.debug.xcconfig"; path = "Target Support Files/Pods-SendInvites/Pods-SendInvites.debug.xcconfig"; sourceTree = "<group>"; };
+		36ECAA872462FE1F007B9FB4 /* SendInvites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendInvites.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36ECAA912462FE1F007B9FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36ECAA932462FE20007B9FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36ECAA962462FE20007B9FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36ECAA982462FE20007B9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36ECAA9D2462FE20007B9FB4 /* SendInvitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendInvitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInvitesTests.swift; sourceTree = "<group>"; };
+		36ECAAA32462FE20007B9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64BDABDCEC206AB41A3CDC69 /* libPods-SendInvites.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SendInvites.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73868EFB40DC1435A2990B52 /* Pods-SendInvites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvites.release.xcconfig"; path = "Target Support Files/Pods-SendInvites/Pods-SendInvites.release.xcconfig"; sourceTree = "<group>"; };
+		7885D2B82C7C9B335802FD19 /* Pods-SendInvitesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvitesTests.debug.xcconfig"; path = "Target Support Files/Pods-SendInvitesTests/Pods-SendInvitesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E6BCF14C3B18BA9DF7229E7 /* libPods-SendInvitesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SendInvitesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819400556D2F41BDB9CE291A /* Pods-SendInvitesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendInvitesTests.release.xcconfig"; path = "Target Support Files/Pods-SendInvitesTests/Pods-SendInvitesTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36ECAA842462FE1F007B9FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FFED48EFB9FA96026C03D57 /* libPods-SendInvites.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36ECAA9A2462FE20007B9FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A226CC9E5B5A8BE9F631E4 /* libPods-SendInvitesTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36ECAA7E2462FE1F007B9FB4 = {
+			isa = PBXGroup;
+			children = (
+				36ECAA892462FE1F007B9FB4 /* SendInvites */,
+				36ECAAA02462FE20007B9FB4 /* SendInvitesTests */,
+				36ECAA882462FE1F007B9FB4 /* Products */,
+				EF31601FB6EA32AE4C1FAA23 /* Pods */,
+				618C268AA1FC148E49635787 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		36ECAA882462FE1F007B9FB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36ECAA872462FE1F007B9FB4 /* SendInvites.app */,
+				36ECAA9D2462FE20007B9FB4 /* SendInvitesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36ECAA892462FE1F007B9FB4 /* SendInvites */ = {
+			isa = PBXGroup;
+			children = (
+				36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */,
+				36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */,
+				36ECAA8E2462FE1F007B9FB4 /* ViewController.swift */,
+				36ECAA902462FE1F007B9FB4 /* Main.storyboard */,
+				36ECAA932462FE20007B9FB4 /* Assets.xcassets */,
+				36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */,
+				36ECAA982462FE20007B9FB4 /* Info.plist */,
+			);
+			path = SendInvites;
+			sourceTree = "<group>";
+		};
+		36ECAAA02462FE20007B9FB4 /* SendInvitesTests */ = {
+			isa = PBXGroup;
+			children = (
+				36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */,
+				36ECAAA32462FE20007B9FB4 /* Info.plist */,
+			);
+			path = SendInvitesTests;
+			sourceTree = "<group>";
+		};
+		618C268AA1FC148E49635787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64BDABDCEC206AB41A3CDC69 /* libPods-SendInvites.a */,
+				7E6BCF14C3B18BA9DF7229E7 /* libPods-SendInvitesTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF31601FB6EA32AE4C1FAA23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				067E341F79C2194293E5DBCF /* Pods-SendInvites.debug.xcconfig */,
+				73868EFB40DC1435A2990B52 /* Pods-SendInvites.release.xcconfig */,
+				7885D2B82C7C9B335802FD19 /* Pods-SendInvitesTests.debug.xcconfig */,
+				819400556D2F41BDB9CE291A /* Pods-SendInvitesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36ECAA862462FE1F007B9FB4 /* SendInvites */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36ECAAA62462FE20007B9FB4 /* Build configuration list for PBXNativeTarget "SendInvites" */;
+			buildPhases = (
+				615F1A2F3E14442B28782EDF /* [CP] Check Pods Manifest.lock */,
+				36ECAA832462FE1F007B9FB4 /* Sources */,
+				36ECAA842462FE1F007B9FB4 /* Frameworks */,
+				36ECAA852462FE1F007B9FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendInvites;
+			productName = SendInvites;
+			productReference = 36ECAA872462FE1F007B9FB4 /* SendInvites.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36ECAA9C2462FE20007B9FB4 /* SendInvitesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36ECAAA92462FE20007B9FB4 /* Build configuration list for PBXNativeTarget "SendInvitesTests" */;
+			buildPhases = (
+				D7C7F12F26E259A82CC8F8B8 /* [CP] Check Pods Manifest.lock */,
+				36ECAA992462FE20007B9FB4 /* Sources */,
+				36ECAA9A2462FE20007B9FB4 /* Frameworks */,
+				36ECAA9B2462FE20007B9FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36ECAA9F2462FE20007B9FB4 /* PBXTargetDependency */,
+			);
+			name = SendInvitesTests;
+			productName = SendInvitesTests;
+			productReference = 36ECAA9D2462FE20007B9FB4 /* SendInvitesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36ECAA7F2462FE1F007B9FB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Damisi Pikuda";
+				TargetAttributes = {
+					36ECAA862462FE1F007B9FB4 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					36ECAA9C2462FE20007B9FB4 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 36ECAA862462FE1F007B9FB4;
+					};
+				};
+			};
+			buildConfigurationList = 36ECAA822462FE1F007B9FB4 /* Build configuration list for PBXProject "SendInvites" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36ECAA7E2462FE1F007B9FB4;
+			productRefGroup = 36ECAA882462FE1F007B9FB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36ECAA862462FE1F007B9FB4 /* SendInvites */,
+				36ECAA9C2462FE20007B9FB4 /* SendInvitesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36ECAA852462FE1F007B9FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36ECAA972462FE20007B9FB4 /* LaunchScreen.storyboard in Resources */,
+				36ECAA942462FE20007B9FB4 /* Assets.xcassets in Resources */,
+				36ECAA922462FE1F007B9FB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36ECAA9B2462FE20007B9FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		615F1A2F3E14442B28782EDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SendInvites-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C7F12F26E259A82CC8F8B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SendInvitesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36ECAA832462FE1F007B9FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36ECAA8F2462FE1F007B9FB4 /* ViewController.swift in Sources */,
+				36ECAA8B2462FE1F007B9FB4 /* AppDelegate.swift in Sources */,
+				36ECAA8D2462FE1F007B9FB4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36ECAA992462FE20007B9FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36ECAAA22462FE20007B9FB4 /* SendInvitesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36ECAA9F2462FE20007B9FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36ECAA862462FE1F007B9FB4 /* SendInvites */;
+			targetProxy = 36ECAA9E2462FE20007B9FB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36ECAA902462FE1F007B9FB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36ECAA912462FE1F007B9FB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36ECAA952462FE20007B9FB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36ECAA962462FE20007B9FB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36ECAAA42462FE20007B9FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36ECAAA52462FE20007B9FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36ECAAA72462FE20007B9FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067E341F79C2194293E5DBCF /* Pods-SendInvites.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = SendInvites/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pikuda.SendInvites;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36ECAAA82462FE20007B9FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73868EFB40DC1435A2990B52 /* Pods-SendInvites.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = SendInvites/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pikuda.SendInvites;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36ECAAAA2462FE20007B9FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7885D2B82C7C9B335802FD19 /* Pods-SendInvitesTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = SendInvitesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pikuda.SendInvitesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendInvites.app/SendInvites";
+			};
+			name = Debug;
+		};
+		36ECAAAB2462FE20007B9FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 819400556D2F41BDB9CE291A /* Pods-SendInvitesTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = SendInvitesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pikuda.SendInvitesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendInvites.app/SendInvites";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36ECAA822462FE1F007B9FB4 /* Build configuration list for PBXProject "SendInvites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36ECAAA42462FE20007B9FB4 /* Debug */,
+				36ECAAA52462FE20007B9FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36ECAAA62462FE20007B9FB4 /* Build configuration list for PBXNativeTarget "SendInvites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36ECAAA72462FE20007B9FB4 /* Debug */,
+				36ECAAA82462FE20007B9FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36ECAAA92462FE20007B9FB4 /* Build configuration list for PBXNativeTarget "SendInvitesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36ECAAAA2462FE20007B9FB4 /* Debug */,
+				36ECAAAB2462FE20007B9FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36ECAA7F2462FE1F007B9FB4 /* Project object */;
+}
