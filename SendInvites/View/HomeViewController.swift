@@ -16,8 +16,8 @@ final class HomeViewController: SIViewController {
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.showsVerticalScrollIndicator = true
-        tableView.backgroundColor = .primary
-        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        tableView.bounces = false
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.alpha = 0
         return tableView
     }()
@@ -129,7 +129,15 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 45
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return TableHeaderView()
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 35
     }
 }
 
@@ -161,6 +169,8 @@ extension HomeViewController: CustomerDelegate {
             animationPerformed.toggle()
             self.setPreAnimationConstraints()
             self.performInitialAnimations()
+        } else {
+            self.tableView.reloadData()
         }
     }
 

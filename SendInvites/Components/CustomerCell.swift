@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class CustomerCell: UITableViewCell {
+final class CustomerCell: UITableViewCell {
 
     private let idLabel: UILabel = {
         let label = UILabel()
@@ -25,12 +25,11 @@ class CustomerCell: UITableViewCell {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.textColor = .white
-        label.backgroundColor = .black
+        label.textColor = .black
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
-        label.font = UIFont.graphikBold(ofSize: 15)
+        label.font = UIFont.graphikRegular(ofSize: 15)
         return label
     }()
 
@@ -61,9 +60,6 @@ class CustomerCell: UITableViewCell {
     }
 
     private func setupCell() {
-        cellContentView.layer.cornerRadius = 10
-        cellContentView.layer.borderWidth = 1
-        cellContentView.layer.borderColor = UIColor.black.cgColor
         cellContentView.clipsToBounds = true
         cellContentView.backgroundColor = .white
         addSubview(cellContentView)
@@ -88,7 +84,7 @@ class CustomerCell: UITableViewCell {
     }
 
     func bindData(customer: Customer) {
-        idLabel.text = "ID: \(customer.id)"
+        idLabel.text = "\(customer.id)"
         nameLabel.text = customer.name
     }
 }
