@@ -1,0 +1,94 @@
+//
+//  CustomerCell.swift
+//  SendInvites
+//
+//  Created by Oluwadamisi Pikuda on 06/05/2020.
+//  Copyright © 2020 Damisi Pikuda. All rights reserved.
+//
+
+import UIKit
+import SnapKit
+
+class CustomerCell: UITableViewCell {
+
+    private let idLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .gray
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.9
+        label.font = UIFont.graphikRegular(ofSize: 15)
+        return label
+    }()
+
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .white
+        label.backgroundColor = .black
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.9
+        label.font = UIFont.graphikBold(ofSize: 15)
+        return label
+    }()
+
+    private let cellContentView = UIView()
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        idLabel.text = nil
+        nameLabel.text = nil
+    }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        backgroundColor = .clear
+        selectionStyle = .none
+
+        setupCell()
+        setupLabels()
+    }
+
+    private func setupCell() {
+        cellContentView.layer.cornerRadius = 10
+        cellContentView.layer.borderWidth = 1
+        cellContentView.layer.borderColor = UIColor.black.cgColor
+        cellContentView.clipsToBounds = true
+        cellContentView.backgroundColor = .white
+        addSubview(cellContentView)
+        cellContentView.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(self)
+            make.width.equalTo(self).multipliedBy(0.8)
+            make.height.equalTo(self).multipliedBy(0.8)
+        }
+    }
+
+    private func setupLabels() {
+        cellContentView.addSubviews([idLabel, nameLabel])
+        idLabel.snp.makeConstraints { make in
+            make.left.top.bottom.equalTo(cellContentView)
+            make.width.equalTo(cellContentView).multipliedBy(0.3)
+        }
+
+        nameLabel.snp.makeConstraints { make in
+            make.right.top.bottom.equalTo(cellContentView)
+            make.left.equalTo(idLabel.snp.right)
+        }
+    }
+
+    func bindData(customer: Customer) {
+        idLabel.text = "ID: \(customer.id)"
+        nameLabel.text = customer.name
+    }
+}
