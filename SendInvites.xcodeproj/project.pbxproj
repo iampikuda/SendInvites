@@ -18,6 +18,16 @@
 		364200572464240300184FF9 /* GraphikBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 364200562464240300184FF9 /* GraphikBold.otf */; };
 		364200592464263100184FF9 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200582464263100184FF9 /* UIScrollView+Utils.swift */; };
 		3642005B2464322500184FF9 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642005A2464322500184FF9 /* TableHeaderView.swift */; };
+		3642006024643B5F00184FF9 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642005F24643B5F00184FF9 /* Data+Utils.swift */; };
+		3642006224643B7900184FF9 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642006124643B7900184FF9 /* Dictionary+Utils.swift */; };
+		3642006424644BEA00184FF9 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642006324644BEA00184FF9 /* String+Utils.swift */; };
+		364200662464554C00184FF9 /* SIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200652464554C00184FF9 /* SIError.swift */; };
+		364200682464DD4700184FF9 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200672464DD4700184FF9 /* Double+Utils.swift */; };
+		3642006A2464E14F00184FF9 /* SILocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200692464E14F00184FF9 /* SILocation.swift */; };
+		3642006D2464E1EE00184FF9 /* DistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642006C2464E1EE00184FF9 /* DistanceService.swift */; };
+		364200702465921500184FF9 /* customers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3642006F2465921500184FF9 /* customers.txt */; };
+		364200722465A1A300184FF9 /* HomeViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200712465A1A300184FF9 /* HomeViewControllerSnapshotTest.swift */; };
+		364200752465A1D300184FF9 /* SISnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364200742465A1D300184FF9 /* SISnapshotTest.swift */; };
 		36ECAA8B2462FE1F007B9FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */; };
 		36ECAA8D2462FE1F007B9FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */; };
 		36ECAA942462FE20007B9FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ECAA932462FE20007B9FB4 /* Assets.xcassets */; };
@@ -52,6 +62,16 @@
 		364200562464240300184FF9 /* GraphikBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GraphikBold.otf; sourceTree = "<group>"; };
 		364200582464263100184FF9 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
 		3642005A2464322500184FF9 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		3642005F24643B5F00184FF9 /* Data+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Utils.swift"; sourceTree = "<group>"; };
+		3642006124643B7900184FF9 /* Dictionary+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utils.swift"; sourceTree = "<group>"; };
+		3642006324644BEA00184FF9 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		364200652464554C00184FF9 /* SIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIError.swift; sourceTree = "<group>"; };
+		364200672464DD4700184FF9 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
+		364200692464E14F00184FF9 /* SILocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SILocation.swift; sourceTree = "<group>"; };
+		3642006C2464E1EE00184FF9 /* DistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceService.swift; sourceTree = "<group>"; };
+		3642006F2465921500184FF9 /* customers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.txt; sourceTree = "<group>"; };
+		364200712465A1A300184FF9 /* HomeViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
+		364200742465A1D300184FF9 /* SISnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SISnapshotTest.swift; sourceTree = "<group>"; };
 		36ECAA872462FE1F007B9FB4 /* SendInvites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendInvites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ECAA8A2462FE1F007B9FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36ECAA8C2462FE1F007B9FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +119,10 @@
 				3642004A24632C5100184FF9 /* UIFont+Utils.swift */,
 				3642004C246349D600184FF9 /* UIView+Utils.swift */,
 				364200582464263100184FF9 /* UIScrollView+Utils.swift */,
+				3642005F24643B5F00184FF9 /* Data+Utils.swift */,
+				3642006124643B7900184FF9 /* Dictionary+Utils.swift */,
+				3642006324644BEA00184FF9 /* String+Utils.swift */,
+				364200672464DD4700184FF9 /* Double+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,8 +149,27 @@
 			isa = PBXGroup;
 			children = (
 				364200522463FBB400184FF9 /* Customer.swift */,
+				364200652464554C00184FF9 /* SIError.swift */,
+				364200692464E14F00184FF9 /* SILocation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3642006B2464E1C800184FF9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3642006C2464E1EE00184FF9 /* DistanceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		364200732465A1C500184FF9 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				364200712465A1A300184FF9 /* HomeViewControllerSnapshotTest.swift */,
+				364200742465A1D300184FF9 /* SISnapshotTest.swift */,
+			);
+			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
 		36ECAA7E2462FE1F007B9FB4 = {
@@ -152,6 +195,7 @@
 		36ECAA892462FE1F007B9FB4 /* SendInvites */ = {
 			isa = PBXGroup;
 			children = (
+				3642006B2464E1C800184FF9 /* Services */,
 				364200512463FBAA00184FF9 /* Model */,
 				3642004E24634C2200184FF9 /* Components */,
 				3642004724632B3600184FF9 /* Font */,
@@ -169,6 +213,8 @@
 		36ECAAA02462FE20007B9FB4 /* SendInvitesTests */ = {
 			isa = PBXGroup;
 			children = (
+				364200732465A1C500184FF9 /* SnapshotTests */,
+				3642006F2465921500184FF9 /* customers.txt */,
 				36ECAAA12462FE20007B9FB4 /* SendInvitesTests.swift */,
 				36ECAAA32462FE20007B9FB4 /* Info.plist */,
 			);
@@ -309,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364200702465921500184FF9 /* customers.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364200662464554C00184FF9 /* SIError.swift in Sources */,
 				36ECAAB324630815007B9FB4 /* SIViewController.swift in Sources */,
+				3642006024643B5F00184FF9 /* Data+Utils.swift in Sources */,
 				36ECAAB524630883007B9FB4 /* HomeViewModel.swift in Sources */,
 				364200552464010A00184FF9 /* TestingService.swift in Sources */,
 				36ECAAAE2463037B007B9FB4 /* AppCoordinator.swift in Sources */,
@@ -376,10 +425,15 @@
 				364200592464263100184FF9 /* UIScrollView+Utils.swift in Sources */,
 				3642004B24632C5100184FF9 /* UIFont+Utils.swift in Sources */,
 				364200532463FBB400184FF9 /* Customer.swift in Sources */,
+				3642006A2464E14F00184FF9 /* SILocation.swift in Sources */,
 				3642004D246349D600184FF9 /* UIView+Utils.swift in Sources */,
 				36420046246329F700184FF9 /* UIColor+Utils.swift in Sources */,
+				3642006424644BEA00184FF9 /* String+Utils.swift in Sources */,
+				364200682464DD4700184FF9 /* Double+Utils.swift in Sources */,
 				3642005B2464322500184FF9 /* TableHeaderView.swift in Sources */,
 				3642005024634C3600184FF9 /* CustomerCell.swift in Sources */,
+				3642006D2464E1EE00184FF9 /* DistanceService.swift in Sources */,
+				3642006224643B7900184FF9 /* Dictionary+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +441,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364200752465A1D300184FF9 /* SISnapshotTest.swift in Sources */,
 				36ECAAA22462FE20007B9FB4 /* SendInvitesTests.swift in Sources */,
+				364200722465A1A300184FF9 /* HomeViewControllerSnapshotTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

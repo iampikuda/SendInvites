@@ -13,7 +13,7 @@ final class TableHeaderView: UIView {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .black
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
         label.font = UIFont.graphikRegular(ofSize: 15)
@@ -25,7 +25,7 @@ final class TableHeaderView: UIView {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .black
-        label.textAlignment = .center
+        label.textAlignment = .right
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
         label.font = UIFont.graphikRegular(ofSize: 15)
@@ -54,12 +54,12 @@ final class TableHeaderView: UIView {
             make.width.equalTo(self).multipliedBy(0.8)
         }
 
-        contentView.addBottomBorder(with: .black, andWidth: 1)
+        self.addBottomBorder(with: .black, andWidth: 2)
 
         contentView.addSubviews([idLabel, nameLabel])
         idLabel.snp.makeConstraints { make in
             make.left.top.bottom.equalTo(contentView)
-            make.width.equalTo(contentView).multipliedBy(0.3)
+            make.width.equalTo(contentView).multipliedBy(0.2)
         }
 
         nameLabel.snp.makeConstraints { make in

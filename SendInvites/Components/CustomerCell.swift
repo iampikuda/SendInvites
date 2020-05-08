@@ -15,7 +15,7 @@ final class CustomerCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .gray
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
         label.font = UIFont.graphikRegular(ofSize: 15)
@@ -26,7 +26,7 @@ final class CustomerCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .black
-        label.textAlignment = .center
+        label.textAlignment = .right
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
         label.font = UIFont.graphikRegular(ofSize: 15)
@@ -74,7 +74,7 @@ final class CustomerCell: UITableViewCell {
         cellContentView.addSubviews([idLabel, nameLabel])
         idLabel.snp.makeConstraints { make in
             make.left.top.bottom.equalTo(cellContentView)
-            make.width.equalTo(cellContentView).multipliedBy(0.3)
+            make.width.equalTo(cellContentView).multipliedBy(0.2)
         }
 
         nameLabel.snp.makeConstraints { make in
@@ -85,6 +85,6 @@ final class CustomerCell: UITableViewCell {
 
     func bindData(customer: Customer) {
         idLabel.text = "\(customer.id)"
-        nameLabel.text = customer.name
+        nameLabel.text = "\(customer.name) (\(Int(customer.distanceFromOffice))km)"
     }
 }

@@ -32,6 +32,28 @@ final class HomeViewController: SIViewController {
         return button
     }()
 
+    private let emailButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor.primary
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.graphikRegular(ofSize: 15)
+        button.setTitle("Send results", for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 2
+        button.isHidden = true
+        return button
+    }()
+
+    private let buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 11
+        return stackView
+    }()
+
     private let topView = UIView()
 
     private var buttonHeight: CGFloat {
@@ -85,12 +107,15 @@ final class HomeViewController: SIViewController {
     }
 
     private func setupButton() {
-        topView.addSubview(findButton)
-        findButton.snp.makeConstraints { make in
+        topView.addSubview(buttonStackView)
+        buttonStackView.snp.makeConstraints { make in
             make.height.equalTo(buttonHeight)
             make.centerY.centerX.equalTo(topView)
             make.width.equalTo(topView).multipliedBy(0.5)
         }
+
+        buttonStackView.addArrangedSubview(findButton)
+        buttonStackView.addArrangedSubview(emailButton)
 
         findButton.addTarget(self, action: #selector(findButtonPressed), for: .touchUpInside)
     }
@@ -180,6 +205,12 @@ extension HomeViewController: CustomerDelegate {
             make.left.right.equalTo(view)
             make.height.equalTo(buttonHeight * 2)
         }
+
+        self.buttonStackView.snp.remakeConstraints { make in
+            make.height.equalTo(buttonHeight)
+            make.centerY.centerX.equalTo(topView)
+            make.width.equalTo(topView).multipliedBy(0.9)
+        }
     }
 
     private func performInitialAnimations() {
@@ -205,6 +236,7 @@ extension HomeViewController: CustomerDelegate {
                         self.tableView.alpha = 1
                         self.tableView.reloadData()
                         self.findButton.setTitle("Search again", for: .normal)
+                        self.emailButton.isHidden = false
                     },
                     completion: { _ in
                         self.tableView.scrollToTop(animated: true)

@@ -30,14 +30,37 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
 
     var numberOfRows: Int {
-        return 15
+        return customers.count
     }
 
+    var customers: [Customer] = []
+
     func getCustomer(forIndexPath indexPath: IndexPath) -> Customer {
-        return Customer(id: 1, name: "asd")
+        return customers[indexPath.row]
     }
 
     func findCustomers() {
-        customerDelegate?.customersFound()
+        if let url = URL(string: "https://s3.amazonaws.com/intercom-take-home-test/customers.txt") {
+            do {
+                let stringies = try String(contentsOf: url, encoding: .utf8)
+                let myStrings = stringies.components(separatedBy: .newlines)
+
+                for line in myStrings {
+                    guard let lineData = line.toData() else { continue }
+                    let customer = try JSONDecoder().decode(Customer.self, from: lineData)
+
+                    if customer.isToBeInvited {
+                        customers.append(customer)
+                    }
+                }
+
+                customers.sort(by: { $0.id < $1.id })
+                customerDelegate?.customersFound()
+            } catch let error {
+                print(error.localizedDescription)
+                customerDelegate?.gotError(error)
+            }
+        }
+
     }
 }
