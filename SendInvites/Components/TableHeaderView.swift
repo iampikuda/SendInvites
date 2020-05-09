@@ -16,7 +16,7 @@ final class TableHeaderView: UIView {
         label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
-        label.font = UIFont.graphikRegular(ofSize: 15)
+        label.font = UIFont.graphikBold(ofSize: 15)
         label.text = "ID"
         return label
     }()
@@ -28,7 +28,7 @@ final class TableHeaderView: UIView {
         label.textAlignment = .right
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.9
-        label.font = UIFont.graphikRegular(ofSize: 15)
+        label.font = UIFont.graphikBold(ofSize: 15)
         label.text = "Name"
         return label
     }()

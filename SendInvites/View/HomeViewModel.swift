@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MessageUI
 
 protocol CustomerDelegate: class {
     func customersFound()
@@ -16,13 +17,14 @@ protocol CustomerDelegate: class {
 protocol HomeViewModelProtocol: class {
     var numberOfSections: Int { get }
     var numberOfRows: Int { get }
+    var customers: [Customer] { get }
     var customerDelegate: CustomerDelegate? { get set }
 
     func findCustomers()
     func getCustomer(forIndexPath indexPath: IndexPath) -> Customer
 }
 
-final class HomeViewModel: HomeViewModelProtocol {
+class HomeViewModel: HomeViewModelProtocol {
     weak var customerDelegate: CustomerDelegate?
 
     var numberOfSections: Int {
@@ -40,27 +42,25 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
 
     func findCustomers() {
-        if let url = URL(string: "https://s3.amazonaws.com/intercom-take-home-test/customers.txt") {
-            do {
-                let stringies = try String(contentsOf: url, encoding: .utf8)
-                let myStrings = stringies.components(separatedBy: .newlines)
+        customers = []
+        do {
+            let dataString = try String(contentsOf: Weblink.customerList1.url, encoding: .utf8)
+            let lines = dataString.components(separatedBy: .newlines)
 
-                for line in myStrings {
-                    guard let lineData = line.toData() else { continue }
-                    let customer = try JSONDecoder().decode(Customer.self, from: lineData)
+            for line in lines {
+                guard let lineData = line.toData() else { continue }
+                let customer = try JSONDecoder().decode(Customer.self, from: lineData)
 
-                    if customer.isToBeInvited {
-                        customers.append(customer)
-                    }
+                if customer.isToBeInvited {
+                    customers.append(customer)
                 }
-
-                customers.sort(by: { $0.id < $1.id })
-                customerDelegate?.customersFound()
-            } catch let error {
-                print(error.localizedDescription)
-                customerDelegate?.gotError(error)
             }
-        }
 
+            customers.sort(by: { $0.id < $1.id })
+            customerDelegate?.customersFound()
+        } catch let error {
+            print(error.localizedDescription)
+            customerDelegate?.gotError(error)
+        }
     }
 }

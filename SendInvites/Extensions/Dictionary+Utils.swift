@@ -12,7 +12,7 @@ extension Dictionary {
     var asJsonString: String {
         let invalidJson = "invalid JSON"
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .sortedKeys)
             return String(bytes: jsonData, encoding: String.Encoding.utf8) ?? invalidJson
         } catch {
             return invalidJson

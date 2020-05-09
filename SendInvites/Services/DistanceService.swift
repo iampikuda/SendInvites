@@ -10,8 +10,8 @@ import Foundation
 
 struct DistanceService {
     static func calculateDistanceTo(location: SILocation) -> Double {
-        let earthRadius: Double = 6371
-        let dublinOffice = SILocation(latitude: 53.339428, longitude: -6.257664)
+        let earthRadius = Double(UIConstants.earthRadius.rawValue)
+        let dublinOffice = SILocation.dublinOfficeLocation
 
         let deltaLong = (dublinOffice.longitude - location.longitude).asRadians.magnitude
 

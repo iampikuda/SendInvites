@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 import SnapKit
 
 final class HomeViewController: SIViewController {
@@ -19,6 +20,7 @@ final class HomeViewController: SIViewController {
         tableView.bounces = false
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.alpha = 0
+        tableView.backgroundColor = .white
         return tableView
     }()
 
@@ -26,7 +28,7 @@ final class HomeViewController: SIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor.black
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.graphikRegular(ofSize: 15)
+        button.titleLabel?.font = UIFont.graphikBold(ofSize: 15)
         button.setTitle("Find Customers", for: .normal)
         button.layer.cornerRadius = 10
         return button
@@ -36,7 +38,7 @@ final class HomeViewController: SIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor.primary
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.graphikRegular(ofSize: 15)
+        button.titleLabel?.font = UIFont.graphikBold(ofSize: 15)
         button.setTitle("Send results", for: .normal)
         button.layer.cornerRadius = 10
         button.layer.borderColor = UIColor.black.cgColor
@@ -60,16 +62,20 @@ final class HomeViewController: SIViewController {
         return screenSize.height * 0.062
     }
 
-    private let cellIdentifier = "customer-cell"
+    let cellIdentifier = "customer-cell"
 
     private var animationPerformed = false
 
-    private let viewModel: HomeViewModelProtocol
+    let viewModel: HomeViewModelProtocol
 
     init(viewModel: HomeViewModelProtocol, screenSize: CGSize = UIScreen.main.bounds.size) {
         self.viewModel = viewModel
         super.init(screenSize: screenSize)
         self.viewModel.customerDelegate = self
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -88,13 +94,18 @@ final class HomeViewController: SIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupMainViews()
         setupButton()
+        setupMainViews()
         setupTableView()
     }
 
     private func setupMainViews() {
         view.addSubviews([topView, tableView])
+        if viewModel.customers.count > 0 {
+            self.showTableView()
+            return
+        }
+
         topView.snp.makeConstraints { make in
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
             make.left.right.equalTo(view)
@@ -118,6 +129,7 @@ final class HomeViewController: SIViewController {
         buttonStackView.addArrangedSubview(emailButton)
 
         findButton.addTarget(self, action: #selector(findButtonPressed), for: .touchUpInside)
+        emailButton.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
     }
 
     private func setupTableView() {
@@ -127,56 +139,59 @@ final class HomeViewController: SIViewController {
     }
 
     @objc private func findButtonPressed() {
-        viewModel.findCustomers()
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSections
+        self.showActivityIndicator()
+        DispatchQueue.global(qos: .default).async {
+            self.viewModel.findCustomers()
+        }
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: cellIdentifier,
-            for: indexPath
-            ) as? CustomerCell else {
-            return UITableViewCell()
+    @objc private func emailButtonPressed() {
+        guard MFMailComposeViewController.canSendMail() else {
+            gotError(SIError(message: "We can't send emails on this device."))
+            return
         }
 
-        cell.bindData(customer: viewModel.getCustomer(forIndexPath: indexPath))
+        let alert = UIAlertController(title: nil, message: "Input your email", preferredStyle: .alert)
+        let sendAction = UIAlertAction(
+            title: "Send results",
+            style: .default
+        ) { _ in
+            guard let email = alert.textFields?[0].text else { return }
+            self.sendResultsTo(email)
+        }
 
-        return cell
-    }
+        sendAction.isEnabled = false
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
-    }
+        alert.addAction(sendAction)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addTextField { textField in
+            textField.placeholder = "Email"
+            NotificationCenter.default.addObserver(
+                forName: UITextField.textDidChangeNotification,
+                object: textField,
+                queue: .main
+                )
+            { (_) in
+                sendAction.isEnabled = textField.text?.isValidEmail ?? false
+            }
+        }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return TableHeaderView()
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
-extension HomeViewController: UITableViewDelegate {}
 
 extension HomeViewController: CustomerDelegate {
     func customersFound() {
-        self.showTableView()
+        DispatchQueue.main.async {
+            self.showTableView()
+        }
     }
 
     func gotError(_ error: Error) {
         let alert = UIAlertController(
             title: "Error",
-            message: "\(error.localizedDescription).\nPlease try again.",
+            message: "\(error.localizedDescription)\nPlease try again.",
             preferredStyle: .alert
         )
 
@@ -196,6 +211,7 @@ extension HomeViewController: CustomerDelegate {
             self.performInitialAnimations()
         } else {
             self.tableView.reloadData()
+            self.hideActivityIndicator()
         }
     }
 
@@ -206,6 +222,11 @@ extension HomeViewController: CustomerDelegate {
             make.height.equalTo(buttonHeight * 2)
         }
 
+        self.tableView.snp.remakeConstraints { make in
+            make.left.right.bottom.equalTo(view)
+            make.top.equalTo(topView.snp.bottom)
+        }
+
         self.buttonStackView.snp.remakeConstraints { make in
             make.height.equalTo(buttonHeight)
             make.centerY.centerX.equalTo(topView)
@@ -214,10 +235,19 @@ extension HomeViewController: CustomerDelegate {
     }
 
     private func performInitialAnimations() {
-        if TestingService.isUnderTest { return }
+        #if DEBUG
+        if TestingService.isUnderTest {
+            self.view.layoutIfNeeded()
+            self.tableView.alpha = 1
+            self.tableView.reloadData()
+            self.findButton.setTitle("Search again", for: .normal)
+            self.emailButton.isHidden = false
+            return
+        }
+        #endif
 
         UIView.animate(
-            withDuration: 2,
+            withDuration: 1,
             delay: 0,
             usingSpringWithDamping: 0.7,
             initialSpringVelocity: 1,
@@ -226,10 +256,6 @@ extension HomeViewController: CustomerDelegate {
                 self.view.layoutIfNeeded()
             },
             completion: { _ in
-                UIView.animate(withDuration: 0.5) {
-                    self.tableView.alpha = 1
-                }
-
                 UIView.animate(
                     withDuration: 0.5,
                     animations: {
@@ -237,9 +263,8 @@ extension HomeViewController: CustomerDelegate {
                         self.tableView.reloadData()
                         self.findButton.setTitle("Search again", for: .normal)
                         self.emailButton.isHidden = false
-                    },
-                    completion: { _ in
-                        self.tableView.scrollToTop(animated: true)
+                    }, completion: { _ in
+                        self.hideActivityIndicator()
                     }
                 )
             }

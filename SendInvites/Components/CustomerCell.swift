@@ -85,6 +85,6 @@ final class CustomerCell: UITableViewCell {
 
     func bindData(customer: Customer) {
         idLabel.text = "\(customer.id)"
-        nameLabel.text = "\(customer.name) (\(Int(customer.distanceFromOffice))km)"
+        nameLabel.text = "\(customer.name) (\(customer.distanceFromOffice.rounded(.up))km)"
     }
 }

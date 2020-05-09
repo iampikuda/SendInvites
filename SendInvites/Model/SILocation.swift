@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct SILocation {
+struct SILocation: Equatable {
     let latitude: Double
     let longitude: Double
+
+    static let dublinOfficeLocation = SILocation(latitude: 53.339428, longitude: -6.257664)
 }
