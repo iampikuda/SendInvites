@@ -78,6 +78,7 @@
 		358776F586F85C5BADCCF077287C5C93 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		36A6C6B62467324F00B2A522 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		36A6C6B8246732A100B2A522 /* HomeViewController+Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Mail.swift"; sourceTree = "<group>"; };
+		36A6C6BA2467365E00B2A522 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
 		4D65979E2F41A1062D0999A7CADCB7B1 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		508DD41451B1E277A6629483EAC8C4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5328A80D45DE96DA2F2612BAADEDD292 /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 				8ED2D5ECBAC0496FA34520D6F7C27A9D /* AppDelegate.swift */,
 				1A99ADFB0EF130068D67DD9D4AE2E8BC /* SIViewController.swift */,
 				716955CE070535C09CC20C96EE610DEE /* SceneDelegate.swift */,
+				36A6C6BA2467365E00B2A522 /* readme.md */,
 			);
 			path = SendInvites;
 			sourceTree = "<group>";

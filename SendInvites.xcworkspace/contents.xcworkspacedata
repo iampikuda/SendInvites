@@ -5,6 +5,9 @@
       location = "group:SendInvites.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SendInvites/../readme.md">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
